@@ -4,26 +4,53 @@
 
 #### 1. Overview
 
-This project focuses on cleaning and preprocessing a dataset using Pandas in Python. The goal is to prepare the data for further analysis or modeling by handling missing values, outliers, and other common data quality issues.
+This project demonstrates the use of web scraping techniques to extract information from the website Books to Scrape. Using Python libraries like requests and BeautifulSoup, the project retrieves book details such as titles, prices, ratings, and categories, and visualizes the scraped data. The goal is to practice and learn web scraping, data analysis, and visualization.
 
 #### 2. Data
 
-This dataset is taken from the DP03 and DP05 tables of the 2015 American Community Survey 5-year estimates. The full datasets and much more can be found at the American Factfinder website. 
+Toscrape.com offers various websites that simulate real-world web scraping scenarios. You can practice your skills on books, quotes, login, viewstate, random and more endpoints with different challenges and features.
 
-#### 3. Data Cleaning Process
+#### 3. Features
+
+- Scraping Total Number of Books: Retrieves the total number of books available on the website.
+- Book Categories and Counts: Scrapes all book categories and counts the number of books in each.
+- Book Ratings and Prices: Extracts star ratings and prices for each book.
+- Top 10 Highest-Rated Books: Displays the top 10 books based on ratings and price.
+- Data Visualization: Visualizes: Distribution of book ratings, Distribution of book prices, Relationship between book prices and ratings
+- Saving Data: The scraped data can be saved to CSV for further use.
+
+#### 4. Data Scraped
+
+- Categories: All book categories from the website.
+- Books: Titles, ratings, and prices for individual books.
+- Book Counts: Number of books in each category.
+
+#### 5. Data Visualization
+
+- Ratings Distribution: Displays the number of books per rating (1 to 5 stars).
+- Price Distribution: Shows a histogram of book prices.
+- Price vs. Rating Scatter Plot: Plots the relationship between book prices and ratings.
+
+#### 6. Web Scraping Process
    
-- Missing Values: Some columns like Hispanic, Income, and Unemployment have missing values (nulls). 
-- Data Types: The data types seem appropriate.
-- Scale Differences: Some values might have different scales, such as TotalPop versus percentages like Hispanic, White, etc. 
-- Outliers: Checked for outliers in columns like Income, Unemployment, and Poverty. Outliers could skew 
+   1. Make Requests to the Website
+   2. Scrape Total Number of Books
+   3. Scrape Book Categories
+   4. Count Books in Each Category
+   5. Scrape Book URLs and Ratings
+   6. Top 10 Highest-Rated Books
+   7. Analyze Book Categories and Counts
+   8. Visualize Data
+   9. Save Data to CSV
 
-#### 4. Key Findings
+#### 7. Key Findings
       
-- Income: The average income is around $57,225 with a wide range (min: $2,611, max: $248,750).
-- The standard deviation is high ($28,449), indicating that incomes vary significantly between areas.
-- Poverty: The average poverty rate is 16.96%, with a wide spread from 0% to 100%. This shows there are areas with extreme poverty conditions, which could be visible as clusters of high poverty rates in the scatterplot.
-- Unemployment: The average unemployment rate is 9.03%, with a large range from 0% to 100%. 
+- Total Number of Books: The website contains 1000 books, as confirmed by the output of the get_total_books() function.
+- Books per Category: Categories like Mystery, Fiction, Nonfiction, Fantasy, and Childrens have 20 books each. Some categories have significantly fewer books, such as Paranormal (1 book), Parenting (1 book), and Suspense (1 book).
+- Top 10 Highest-Rated Books: The top 10 books, sorted by rating, show a mix of popular titles and high prices. The book Sapiens: A Brief History of Humankind is the most expensive among the top-rated books at £54.23, while other books like Set Me Free and The Coming Woman are more affordable.
+- The distribution of books across categories shows a concentration of books in popular categories like Fiction and Nonfiction.
+- The output also suggests that there are niche categories with very few books, such as Crime, Cultural, and Paranormal, which might indicate less content in these genres.
 
-#### 5.  Source
+#### 8.  Source
 
-The data here were collected by the US Census Bureau. https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data
+https://books.toscrape.com/
